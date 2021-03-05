@@ -77,12 +77,12 @@ cat - > $temp_file
 kubeval $temp_file > $output_file
 
 if [ $? -eq 0 ]; then
-    cat $temp_file
+    cat $output_file
     rm $temp_file $output_file
     exit 0
 fi
 
-cat $output_file
+cat $temp_file
 rm $temp_file $output_file
 exit 1
 
